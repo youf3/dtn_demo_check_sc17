@@ -63,15 +63,15 @@ def checkVlan():
             # neither 61 nor 63 is failed to ping, return 0
             return 0
         else :
-            return 61
+            return 3061
     else :
         # vlan 63 ok , check 61
         if int(check_command("ping -c 1 " + vlan61 + ">/dev/null")) != 0:
             # vlan 63 ok, check 61 failed
-            return 63
+            return 3063
         else:
             # both 61 nor 63 is ok to ping
-            return 6163
+            return 30633061
 
 
 def checkJupyter():
