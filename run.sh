@@ -4,11 +4,11 @@ bin=`dirname "$0"`
 bin=`cd "$bin"; pwd`
 cd $bin;
 from=$(date +%s)
-now=$(date +%y%m%d_%H%M%S)
+starttime=$(date +%y%m%d_%H%M%S)
 
-/usr/bin/python3 ./dtn_demo_check_sc17.py
+/usr/bin/python3 ./dtn_demo_check_sc17.py > ./.tmp.data
 
 now=$(date +%s)
 total_time=$(expr $now - $from )
 
-echo "$now | $total_time : /bin/python3 ./dtn_demo_check_sc17.py " > run.log
+echo "$starttime | $total_time : "$(cat ./.tmp.data) >> run.log

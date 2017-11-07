@@ -160,7 +160,8 @@ def main():
     checklist["testfile_check"] = checkFileExist()
     checklist["permission_check"] = checkDirPermission()
     json_str = json.dumps(checklist,indent=4)
-    print(json_str)
+    tmp_str = json.dumps(checklist)
+    print(tmp_str)
     with open("./dtn_demo_check_sc17.json","w") as f :
         f.write(json_str)
 
