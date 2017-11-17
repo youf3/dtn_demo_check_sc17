@@ -1,8 +1,0 @@
-{
-    "jupyter_check": 0,
-    "permission_check": 0,
-    "testfile_check": 0,
-    "nvme_check": 8,
-    "vlan_check": 61,
-    "firewall_check": 1
-}
